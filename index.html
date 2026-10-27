@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="ms" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAI Centre - Bina Laman Web dengan AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Dark blue
+                        secondary: '#7e22ce', // Purple
+                        accent: '#06b6d4', // Cyan
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #1e3a8a, #7e22ce);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+<style>.lms-source-label {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 10px;
+    padding: 4px 4px;
+    font-family: sans-serif;
+    font-size: 10px;
+    pointer-events: none;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+</style></head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-gray-900 tracking-tight">MyAI <span class="text-secondary">Centre</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#pengenalan" class="text-gray-600 hover:text-primary font-medium transition">Pengenalan</a>
+                    <a href="#objektif" class="text-gray-600 hover:text-primary font-medium transition">Objektif</a>
+                    <a href="#modul" class="text-gray-600 hover:text-primary font-medium transition">Modul Kursus</a>
+                    <a href="#daftar" class="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-full font-semibold transition shadow-md hover:shadow-lg">Daftar Webinar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Landing Page) -->
+    <main class="flex-grow pt-20">
+        <section id="pengenalan" class="hero-pattern py-20 lg:py-32 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-4xl mx-auto">
+                    <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-primary text-sm font-semibold mb-6 border border-blue-200">Portal Pembelajaran Inovatif</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+                        Revolusikan Pembinaan Web dengan <br class="hidden md:block">
+                        <span class="gradient-text">AI Generatif (Gemini)</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
+                        Kuasai seni membina laman web profesional tanpa perlu pening dengan kod yang kompleks. Dari perancangan struktur hingga penerbitan, pelajari rahsia memanfaatkan AI untuk mempercepatkan proses kerja anda sehingga 10x ganda!
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="#modul" class="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                            Lihat Modul <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                        <a href="#objektif" class="bg-white hover:bg-gray-50 text-gray-800 border-2 border-gray-200 px-8 py-4 rounded-full text-lg font-semibold transition shadow-sm flex items-center justify-center">
+                            Kenapa Sertai?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objektif & Ringkasan Section -->
+        <section id="objektif" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-accent pl-4">Objektif Webinar</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-primary mt-1">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p class="text-gray-700 text-lg">Memahami konsep dan terma penting dalam AI Generatif (terutamanya Google Gemini).</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-primary mt-1">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p class="text-gray-700 text-lg">Menguasai seni *Prompt Engineering* untuk menjana kod, teks korporat, dan struktur web yang tepat.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-primary mt-1">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <p class="text-gray-700 text-lg">Membina dan menerbitkan laman web yang berfungsi sepenuhnya secara percuma tanpa pelayan berbayar.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm relative">
+                        <div class="absolute -top-4 -right-4 text-6xl text-gray-200 opacity-50"><i class="fa-solid fa-quote-right"></i></div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Apa yang akan anda pelajari?</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Sesi ini direka khas untuk pemula dan profesional yang ingin mengintegrasikan AI dalam aliran kerja mereka. Anda tidak perlu menjadi pakar IT!
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Di akhir webinar, setiap peserta akan mempunyai sekurang-kurangnya satu laman web portfolio atau perniagaan yang berjaya diterbitkan secara dalam talian, hasil dari janaan AI 100%.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modul Pembelajaran -->
+        <section id="modul" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Struktur Pembelajaran</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">7 Modul komprehensif dari asas hingga penerbitan.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Modul 1 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition group">
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-primary text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Modul 1</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Asas AI (AI Basic)</h3>
+                        <p class="text-gray-600 text-sm">Pengenalan kepada teknologi AI Generatif, pemahaman terma penting (LLM, GPT, dll), dan bagaimana AI membantu automasi tugasan harian dan kerja pembangunan web.</p>
+                    </div>
+
+                    <!-- Modul 2 (Telah dihubungkan ke slaid) -->
+                    <a href="asas_prompt_myai.html" target="_blank" class="block bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-lg transition group border-t-4 border-t-secondary hover:border-secondary cursor-pointer">
+                        <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Modul 2 <span class="text-xs font-normal text-gray-400 lowercase ml-1">(Klik untuk lihat slaid)</span></span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Seni Prom (Prompt Basic)</h3>
+                        <p class="text-gray-600 text-sm">Koleksi formula prom spesifik (berinspirasikan gaya Prompt Academy) untuk menjana kod laman web tepat, merangka struktur menu (UI/UX), dan menghasilkan kandungan teks korporat.</p>
+                    </a>
+
+                    <!-- Modul 3 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition group">
+                        <div class="w-12 h-12 rounded-lg bg-cyan-50 flex items-center justify-center text-accent text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Modul 3</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Asas Web</h3>
+                        <p class="text-gray-600 text-sm">Pemahaman ringkas tentang anatomi laman web. Kenali peranan struktur HTML5, asas JavaScript untuk interaktiviti, dan penggayaan rekaan menggunakan CSS.</p>
+                    </div>
+
+                    <!-- Modul 4 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition group">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Modul 4</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Bina Web dengan Gemini</h3>
+                        <p class="text-gray-600 text-sm">Panduan <i>step-by-step</i> berinteraksi dengan Google Gemini. Dari prompt awalan, proses <i>debugging</i> kod yang dijana, sehingga mendapat hasil kod lengkap yang berfungsi.</p>
+                    </div>
+
+                    <!-- Modul 5 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition group">
+                        <div class="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-orange-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Modul 5</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Menentukan Objektif</h3>
+                        <p class="text-gray-600 text-sm">Teknik merangka hala tuju web anda. Ketahui perbezaan komponen yang perlu ada untuk Landing Page, Web Portfolio peribadi, atau profil Perniagaan (Corporate).</p>
+                    </div>
+
+                    <!-- Modul 6 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition group">
+                        <div class="w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center text-pink-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Modul 6</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Layout &amp; Copywriting</h3>
+                        <p class="text-gray-600 text-sm">Menggunakan AI sebagai *copywriter* dan *designer*. Menjana susun atur yang menarik secara visual dan penulisan yang meyakinkan (persuasif) untuk pelawat web.</p>
+                    </div>
+
+                    <!-- Modul 7 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition group lg:col-start-2">
+                        <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <span class="text-xs font-bold text-secondary uppercase tracking-wider mb-2 block">Modul 7</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Menerbitkan Website (Publish)</h3>
+                        <p class="text-gray-600 text-sm">Pelajari cara *hosting* laman web anda secara percuma! Panduan menaik taraf fail ke Github Pages, Vercel, Google Site, atau perkhidmatan percuma yang lain.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="daftar" class="py-20 bg-gradient-to-br from-primary to-secondary text-white text-center">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Bersedia untuk mencipta laman web pertama anda dengan AI?</h2>
+                <p class="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">Sertai webinar eksklusif ini sekarang. Tempat adalah terhad bagi memastikan setiap peserta mendapat perhatian yang optimum.</p>
+                <button onclick="alert(&#39;Ini adalah demonstrasi klik. Sistem pendaftaran sebenar akan disepadukan di sini.&#39;)" class="bg-white text-primary hover:bg-gray-100 px-10 py-4 rounded-full text-lg font-bold transition shadow-2xl hover:scale-105 transform">
+                    Daftar Tempat Anda Sekarang
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center items-center gap-2 mb-4 text-white opacity-80">
+                <i class="fa-solid fa-robot"></i>
+                <span class="font-bold text-xl tracking-tight">MyAI Centre</span>
+            </div>
+            <p class="text-sm">© 2026 MyAI Centre. Hak Cipta Terpelihara. Konsep rujukan dari Prompt Academy.</p>
+        </div>
+    </footer>
+
+
+</body></html>
